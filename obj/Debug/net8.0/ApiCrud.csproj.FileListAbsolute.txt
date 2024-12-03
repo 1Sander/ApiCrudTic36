@@ -157,3 +157,4 @@ C:\Users\Sander\Desktop\Tic36 API\ApiCrud\obj\Debug\net8.0\refint\ApiCrud.dll
 C:\Users\Sander\Desktop\Tic36 API\ApiCrud\obj\Debug\net8.0\ApiCrud.pdb
 C:\Users\Sander\Desktop\Tic36 API\ApiCrud\obj\Debug\net8.0\ApiCrud.genruntimeconfig.cache
 C:\Users\Sander\Desktop\Tic36 API\ApiCrud\obj\Debug\net8.0\ref\ApiCrud.dll
+C:\Users\Sander\Desktop\Tic36 API\ApiCrud\obj\Debug\net8.0\ApiCrud.sourcelink.json

@@ -2,6 +2,7 @@ using ApiCrud.Data;
 using ApiCrud.Clientes;
 using ApiCrud.Pedidos;
 using ApiCrud.Produtos;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<AppDbContext>();
+builder.Services.AddCors(option =>
+ option.AddDefaultPolicy(policy => 
+ {
+    policy.AllowAnyOrigin();
+    policy.AllowAnyMethod();
+    policy.AllowAnyHeader();
+ } ));
 
 var app = builder.Build();
 
@@ -22,7 +30,10 @@ if (app.Environment.IsDevelopment())
 }
 
 //configurando rotas
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+
+app.UseCors();
+
 app.AddRotasClientes();
 app.AddRotasPedidos();
 app.AddRotasProdutos();
